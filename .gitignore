@@ -1,0 +1,22 @@
+# Secrets
+.credentials.json
+
+# Plugins (managed separately)
+plugins/
+
+# Runtime/session data
+history.jsonl
+cache/
+backups/
+debug/
+file-history/
+paste-cache/
+shell-snapshots/
+sessions/
+session-env/
+telemetry/
+mcp-needs-auth-cache.json
+plans/
+tasks/
+projects/
+settings.json.bak

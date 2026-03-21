@@ -1,0 +1,10 @@
+{
+  "name": "claude-archived-skills-mcp",
+  "version": "1.0.0",
+  "description": "Local MCP server to search Claude Code archived skills.",
+  "main": "index.js",
+  "type": "module",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.6.0"
+  }
+}

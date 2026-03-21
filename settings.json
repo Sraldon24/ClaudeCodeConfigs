@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "cleanupPeriodDays": 365,
+  "env": {
+    "ENABLE_CLAUDEAI_MCP_SERVERS": "true",
+    "MAX_MCP_OUTPUT_TOKENS": "10000",
+    "MCP_TIMEOUT": "10000",
+    "CLAUDE_AUTOCOMPACT_PCT_OVERRIDE": "50"
+  },
+  "permissions": {
+    "allow": [
+      "Bash",
+      "Read",
+      "Edit",
+      "Write",
+      "Glob",
+      "Grep",
+      "WebFetch",
+      "WebSearch",
+      "Agent",
+      "Task",
+      "TodoWrite",
+      "NotebookEdit",
+      "MCP"
+    ],
+    "deny": [],
+    "defaultMode": "bypassPermissions"
+  },
+  "enableAllProjectMcpServers": false,
+  "enabledPlugins": {
+    "everything-claude-code@everything-claude-code": false,
+    "frontend-design@claude-plugins-official": false,
+    "superpowers@claude-plugins-official": false,
+    "commit-commands@claude-plugins-official": false,
+    "code-review@claude-plugins-official": false,
+    "code-simplifier@claude-plugins-official": false,
+    "ralph-loop@claude-plugins-official": false,
+    "pr-review-toolkit@claude-plugins-official": false,
+    "security-guidance@claude-plugins-official": false,
+    "claude-md-management@claude-plugins-official": false,
+    "serena@claude-plugins-official": false
+  },
+  "context": {
+    "fileName": [
+      "GEMINI.md",
+      "claude.md",
+      "CLAUDE.md",
+      "gemini.md"
+    ],
+    "discoveryMaxDirs": 200
+  },
+  "alwaysThinkingEnabled": false,
+  "effortLevel": "medium",
+  "skipDangerousModePermissionPrompt": true,
+  "showTurnDuration": true
+}

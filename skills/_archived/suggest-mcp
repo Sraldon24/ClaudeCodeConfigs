@@ -1,0 +1,20 @@
+---
+name: suggest-mcp
+description: Suggests MCP servers on-demand when a task needs one that isn't loaded.
+---
+
+# On-Demand MCP Suggestions
+
+Suggest adding MCP servers only when the task clearly needs one that isn't loaded. Check ToolSearch first. Project scope by default. Never auto-add. One suggestion per turn.
+
+## Servers
+
+- **docker**: docker/container/compose → `claude mcp add docker --scope project -- npx -y docker-mcp`
+- **jupyter**: notebook/.ipynb/kernel → `claude mcp add jupyter --scope project -- jupyter-mcp-server`
+- **huggingface**: HF/transformers/datasets → `claude mcp add huggingface --scope project -- huggingface-mcp-server`
+- **magicui**: magicui/animated components → `claude mcp add magicui --scope project -- npx -y magicui-mcp`
+- **21st-design**: 21st-dev/design system → `claude mcp add 21st-design --scope project -- npx -y @21st-dev/magic`
+- **Notion**: notion/wiki → Re-enable at claude.ai/settings/connectors
+
+Keep suggestions to one line + one command. If user agrees, run it.
+
