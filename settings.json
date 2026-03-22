@@ -5,7 +5,10 @@
     "ENABLE_CLAUDEAI_MCP_SERVERS": "true",
     "MAX_MCP_OUTPUT_TOKENS": "10000",
     "MCP_TIMEOUT": "10000",
-    "CLAUDE_AUTOCOMPACT_PCT_OVERRIDE": "50"
+    "CLAUDE_AUTOCOMPACT_PCT_OVERRIDE": "50",
+    "DISABLE_TELEMETRY": "1",
+    "DISABLE_ERROR_REPORTING": "1",
+    "CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY": "1"
   },
   "permissions": {
     "allow": [
@@ -40,6 +43,9 @@
     "claude-md-management@claude-plugins-official": false,
     "serena@claude-plugins-official": false
   },
+  "alwaysThinkingEnabled": false,
+  "effortLevel": "medium",
+  "skipDangerousModePermissionPrompt": true,
   "context": {
     "fileName": [
       "GEMINI.md",
@@ -49,8 +55,28 @@
     ],
     "discoveryMaxDirs": 200
   },
-  "alwaysThinkingEnabled": false,
-  "effortLevel": "medium",
-  "skipDangerousModePermissionPrompt": true,
-  "showTurnDuration": true
+  "showTurnDuration": true,
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/hooks/confirm-dangerous.sh"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/hooks/todo-enforcer.sh"
+          }
+        ]
+      }
+    ]
+  }
 }

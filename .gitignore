@@ -7,6 +7,10 @@ plugins/
 # IDE lock files
 ide/
 
+# Hook runtime temp files
+hooks/*.tmp
+hooks/*.log
+
 # Runtime/session data
 history.jsonl
 cache/
