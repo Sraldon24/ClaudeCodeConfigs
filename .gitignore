@@ -4,6 +4,9 @@
 # Plugins (managed separately)
 plugins/
 
+# IDE lock files
+ide/
+
 # Runtime/session data
 history.jsonl
 cache/
