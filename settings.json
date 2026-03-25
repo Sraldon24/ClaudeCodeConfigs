@@ -30,6 +30,29 @@
     "defaultMode": "bypassPermissions"
   },
   "enableAllProjectMcpServers": false,
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/hooks/confirm-dangerous.sh"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/hooks/todo-enforcer.sh"
+          }
+        ]
+      }
+    ]
+  },
   "enabledPlugins": {
     "everything-claude-code@everything-claude-code": false,
     "frontend-design@claude-plugins-official": false,
@@ -55,28 +78,5 @@
     ],
     "discoveryMaxDirs": 200
   },
-  "showTurnDuration": true,
-  "hooks": {
-    "PreToolUse": [
-      {
-        "matcher": "Bash",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "~/.claude/hooks/confirm-dangerous.sh"
-          }
-        ]
-      }
-    ],
-    "Stop": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "~/.claude/hooks/todo-enforcer.sh"
-          }
-        ]
-      }
-    ]
-  }
+  "showTurnDuration": true
 }
